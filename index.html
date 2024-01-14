@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Pod request access landing page</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <img class="logo" src="assets/desktop/logo.svg" alt="site logo" />
+      <section class="info-section">
+        <div class="info-content">
+          <h1>Publish your podcasts <span>everywhere.</span></h1>
+          <p>
+            Upload your audio to Pod with a single click. We’ll then distribute
+            your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
+            Casts and more!
+          </p>
+          <div class="form-logo-container">
+            <div class="form-container">
+              <form id="emailForm" novalidate>
+                <input
+                  type="email"
+                  id="emailInput"
+                  placeholder="Email address"
+                />
+                <button id="notify-btn" type="submit">Request Access</button>
+                <p id="errorMessage"></p>
+              </form>
+            </div>
+            <div class="logos">
+              <img
+                class="spotify"
+                src="assets/desktop/spotify.svg"
+                alt="spotify logo"
+              />
+              <img
+                class="apple"
+                src="assets/desktop/apple-podcast.svg"
+                alt="apple podcasts logo"
+              />
+              <img
+                class="google"
+                src="assets/desktop/google-podcasts.svg"
+                alt="google podcasts logo"
+              />
+              <img
+                class="pocket"
+                src="assets/desktop/pocket-casts.svg"
+                alt="pocket casts logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="img-section">
+        <picture>
+          <source
+            class="desktop-img"
+            media="(min-width:976px)"
+            srcset="assets/desktop/image-host.jpg"
+          />
+          <img
+            class="tablet-picture"
+            src="assets/tablet/image-host.jpg"
+            alt="podcast host"
+          />
+        </picture>
+        <img
+          class="bg-pattern-dots"
+          src="assets/desktop/bg-pattern-dots.svg"
+          alt="background pattern dots"
+        />
+      </section>
+    </main>
+  </body>
+</html>
