@@ -10,51 +10,134 @@
   --light-gray: #c2cbe5;
 }
 
+/* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   border: 0;
 }
-html {
-  box-sizing: border-box;
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
 }
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  /* display: block; */
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
 body {
   font-family: "Chivo", sans-serif;
   background-color: var(--dark-blue);
   text-align: center;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 main {
   display: flex;
   align-items: center;
-  margin-left: 165px;
+  margin-left: 10.3125rem;
 }
 .info-section {
-  max-width: 723px;
-  max-height: 509px;
+  max-width: 45.1875rem;
+  max-height: 31.8125rem;
   text-align: left;
   background-color: var(--dark-blue);
   position: absolute;
-  padding-top: 88px;
-  padding-right: 58px;
-  margin-top: 131px;
+  padding-top: 5.5rem;
+  padding-right: 3.625rem;
+  margin-top: 8.1875rem;
   z-index: 1;
 }
 .img-section {
-  margin: 130px 0;
+  margin: 8.125rem 0;
   position: relative;
-  left: 387px;
+  left: 24.1875rem;
 }
 .logo {
   position: absolute;
-  margin-top: 102px;
+  margin-top: 6.375rem;
   top: 0;
 }
 .bg-pattern-dots {
@@ -65,12 +148,12 @@ main {
 }
 h1 {
   color: var(--green);
-  font-size: 52px;
+  font-size: 3.25rem;
   font-weight: 400;
-  line-height: 62px;
+  line-height: 3.875rem;
   text-transform: uppercase;
-  width: 665px;
-  margin-bottom: 24px;
+  width: 41.5625rem;
+  margin-bottom: 1.5rem;
   margin-top: 0;
 }
 h1 span {
@@ -78,43 +161,43 @@ h1 span {
 }
 .info-content p {
   color: var(--light-gray);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 28px;
-  max-width: 445px;
+  line-height: 1.75rem;
+  max-width: 27.8125rem;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 #emailForm {
-  height: 56px;
-  margin-bottom: 64px;
+  height: 3.5rem;
+  margin-bottom: 4rem;
 }
 #emailInput::placeholder {
   color: var(--white);
 }
 #emailInput {
-  width: 427px;
-  height: 56px;
-  border-radius: 28px;
+  width: 26.6875rem;
+  height: 3.5rem;
+  border-radius: 1.75rem;
   background: var(--grayish-blue);
   border-style: none;
   color: var(--white);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 1.75rem;
   opacity: 0.5;
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 #notify-btn {
-  width: 162px;
-  height: 46px;
-  border-radius: 28px;
+  width: 10.125rem;
+  height: 2.875rem;
+  border-radius: 1.75rem;
   background: var(--green);
-  box-shadow: 0px 2px 4px 0px rgba(84, 230, 175, 0.14);
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(84, 230, 175, 0.14);
   color: var(--dark-blue);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 1.75rem;
   border-style: none;
   cursor: pointer;
   position: relative;
@@ -131,49 +214,49 @@ h1 span {
 #errorMessage {
   display: none;
   color: #fb3e3e;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   margin-bottom: 0;
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 .logos {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 40px;
-  margin-bottom: 130px;
+  gap: 2.5rem;
+  margin-bottom: 8.125rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   .bg-pattern-dots {
     left: -62%;
     bottom: -258px;
   }
   .img-section {
-    margin-top: 0px;
+    margin-top: 0;
   }
   main {
-    margin-left: 39px;
+    margin-left: 2.4375rem;
   }
   .info-section {
-    max-width: 635px;
-    padding-top: 93px;
+    max-width: 39.6875rem;
+    padding-top: 5.8125rem;
     padding-right: 0;
     margin-top: 0;
   }
   h1 {
-    font-size: 48px;
-    line-height: 56px;
-    max-width: 635px;
-    margin-bottom: 31px;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    max-width: 39.6875rem;
+    margin-bottom: 1.9375rem;
     margin-top: 0;
   }
   .img-section {
-    margin-top: 0px;
-    margin-bottom: 257px;
+    margin-top: 0;
+    margin-bottom: 16.0625rem;
   }
   .logo {
-    margin-top: 50px;
+    margin-top: 3.125rem;
   }
   .bg-pattern-dots {
     position: absolute;
@@ -185,7 +268,7 @@ h1 span {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
   body {
     background-image: url("assets/mobile/image-host.jpg");
     background-repeat: no-repeat;
@@ -206,7 +289,7 @@ h1 span {
   .form-logo-container {
     display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 73px;
+    margin-bottom: 4.5625rem;
     height: auto;
   }
   #emailForm {
@@ -231,56 +314,54 @@ h1 span {
   }
   .logo {
     position: relative;
-    margin: 62px 0 57px auto;
+    margin: 3.875rem 0 3.5625rem auto;
   }
   h1 {
-    font-size: 26px;
-    line-height: 38px;
-    width: 327px;
-    margin: 0 auto 16px;
+    font-size: 1.625rem;
+    line-height: 2.375rem;
+    width: 20.4375rem;
+    margin: 0 auto 1rem;
     padding-top: 0;
   }
   .info-content p {
-    font-size: 15px;
-    line-height: 25px;
-    width: 327px;
-    margin: 0 auto 33px;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    width: 20.4375rem;
+    margin: 0 auto 2.0625rem;
   }
   #emailInput {
-    width: 327px;
-    height: 46px;
-    margin-bottom: 16px;
-    /* margin-bottom: 24px; */
+    width: 20.4375rem;
+    height: 2.875rem;
+    margin-bottom: 1rem;
   }
   #notify-btn {
-    width: 326px;
-    height: 46px;
+    width: 20.375rem;
+    height: 2.875rem;
     position: inherit;
     margin-bottom: 0;
   }
   .logos {
-    width: 315px;
+    width: 19.6875rem;
     justify-content: center;
-    gap: 23px;
-    margin: 0 auto 48px;
+    gap: 1.4375rem;
+    margin: 0 auto 3rem;
   }
   .spotify {
-    width: 56px;
+    width: 3.5rem;
   }
   .apple {
-    width: 45px;
+    width: 2.8125rem;
   }
   .google {
-    width: 73px;
+    width: 4.5625rem;
   }
   .pocket {
-    width: 77px;
+    width: 4.8125rem;
   }
   #errorMessage {
     padding-left: 0;
-    padding-right: 105px;
+    padding-right: 6.5625rem;
     position: relative;
     bottom: 67px;
-    /* bottom: 70px; */
   }
 }
